@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Final Project</title>
+        <link rel="stylesheet" href="login.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="logo">
+            <img id="logoImage" src="musicLogo.png"/>
+        </div>
+        <div id="flexContainer">
+            <div id="left-section">
+                <center><span id="headingText">Login and enjoy <span id="colored">unlimited</span> music conferences with your instructor!</span></center>
+                    <br/>
+                    <form action="./index.html" onsubmit="return validation()"></form>
+                    <input type="text" id="emailTab" placeholder="Email"/>
+                    <br/>
+                    <input type="password" id="passwordTab" placeholder="Password"/>
+                    <br/>
+                    <button id="loginButton" onclick="validation()">LOGIN</button>
+                    </form>
+            </div>
+
+            <div id="right-section">
+        
+                <div>
+                    <strong><span id="topText">Have convenient voice lessons wherever you are</span></strong>
+                    
+                </div>
+
+                <div id="lessonsImage">
+                    <img id="image" src="voiceLessons.jpg">
+                </div>
+                    
+            
+            </div>
+        </div>
+
+    <script src="finalProject.js"></script>
+    <script>
+
+        function validation(){
+            let email = document.getElementById("emailTab")
+            let password = document.getElementById("passwordTab")
+
+            if(email.value.match(/\S+@\S+/)){
+                
+                email.className = ""
+
+                if(password.value.length >= 8){
+                    password.className = ""
+
+                    return true
+                }
+                else
+                {
+                    password.className = "incorrect"
+                    return false
+                }
+            }else{
+                email.className = "incorrect"
+                return false
+            }
+        }
+
+        document.getElementById("loginButton").onclick = function () {
+            if(validation()) {
+            window.location.href = "videoChat.html";
+            }
+        }
+    </script>
+    </body>
+</html>

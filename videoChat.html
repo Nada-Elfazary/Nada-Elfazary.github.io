@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <title>Video Chat HW3</title>
+        <link rel="stylesheet" href="videoChatStyling.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "flexContainer">
+            <div id = "leftSection">
+                <div id = "imageLogo">
+                    <img id = "logo" src= "musicLogo.png"/>
+                </div>
+                <span id="headingText">
+                    Join A Chat!
+                </span>
+                <br>
+                <input type="text" id = "userName" placeholder="Username"/>
+                <br>
+                <input type="text" id = "channelName" placeholder="Channel Name"/>
+                <button id="joinButton">Join</button>
+                <button id="leaveButton">Leave</button>
+                <br>
+                <center><span id = "nameTag"></span></center>
+            </div>
+            <div id="rightSection">
+                <div class = "flexContainer">
+                    <img style = "border: 3px solid rgb(37, 62, 109)" src = "sheetMusic.jpg"/>
+                    <div id="localStream"></div>
+                    <img style = "border: 3px solid rgb(37, 62, 109)" src = "sheetMusic2.jpg"/>
+                </div>
+                
+                <center><div id="remoteStream"></div></center>
+                
+                <div class = "flexContainer" id = "piano">
+                    <button class = "whiteNotes" id="note1">C</button>
+                    <button class = "blackNotes" id="note2">C#</button>
+                    <button class = "whiteNotes" id="note3">D</button>
+                    <button class = "blackNotes" id="note4">D#</button>
+                    <button class = "whiteNotes" id="note5">E</button>
+                    <button class = "whiteNotes" id="note6">F</button>
+                    <button class = "blackNotes" id="note7">F#</button>
+                    <button class = "whiteNotes" id="note8">G</button>
+                    <button class = "blackNotes" id="note9">G#</button>
+                    <button class = "whiteNotes" id="note10">A</button>
+                    <button class = "blackNotes" id="note11">A#</button>
+                    <button class = "whiteNotes" id="note12">B</button>
+                    <button class = "whiteNotes" id="note13">C</button>
+                    <button class = "blackNotes" id="note14">C#</button>
+                    <button class = "whiteNotes" id="note15">D</button>
+                    <button class = "blackNotes" id="note16">D#</button>
+                    <button class = "whiteNotes" id="note17">E</button>
+                    <button class = "whiteNotes" id="note18">F</button>
+                    <button class = "blackNotes" id="note19">F#</button>
+                    <button class = "whiteNotes" id="note20">G</button>
+                    <button class = "blackNotes" id="note21">G#</button>
+                    <button class = "whiteNotes" id="note22">A</button>
+                    <button class = "blackNotes" id="note23">A#</button>
+                    <button class = "whiteNotes" id="note24">B</button>
+                </div>
+                
+                <center><div id = "controls">
+                    <div class="icons" id = "videoMute">
+                        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
+                            <path fill="#4CAF50" d="M8,12h22c2.2,0,4,1.8,4,4v16c0,2.2-1.8,4-4,4H8c-2.2,0-4-1.8-4-4V16C4,13.8,5.8,12,8,12z"/>
+                            <polygon fill="#388E3C" points="44,35 34,29 34,19 44,13"/>
+                            <line fill="none" stroke="#212121" stroke-width="4" stroke-linejoin="round" stroke-miterlimit="10" x1="5" y1="5" x2="43" y2="43"/>
+                        </svg>                        
+
+                    </div>
+
+                    <div class="icons" id = "audioMute">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                    viewBox="0 0 475.1 475.1" style="enable-background:new 0 0 475.1 475.1;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0{fill:url(#SVGID_1_);}
+                        </style>
+                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="40.265" y1="237.5455" x2="434.826" y2="237.5455">
+                            <stop  offset="0" style="stop-color:#1245C6"/>
+                            <stop  offset="1" style="stop-color:#9909B7"/>
+                        </linearGradient>
+                        <path class="st0" d="M113.9,269.8c-2.9-11.4-4.3-22.2-4.3-32.3V201c0-4.9-1.8-9.2-5.4-12.8c-3.6-3.6-7.9-5.4-12.8-5.4
+                            c-5,0-9.2,1.8-12.9,5.4c-3.6,3.6-5.4,7.9-5.4,12.8v36.5c0,21.1,4,41.5,12,61.1L113.9,269.8z M237.5,328.9c25.1,0,46.6-8.9,64.5-26.8
+                            c17.9-17.9,26.8-39.4,26.8-64.5V201L432,97.9c1.9-1.9,2.9-4.1,2.9-6.6s-1-4.7-2.9-6.6l-23.4-23.4c-1.9-1.9-4.1-2.9-6.6-2.9
+                            c-2.5,0-4.7,1-6.6,2.9L43.1,413.7c-1.9,1.9-2.9,4.1-2.9,6.6c0,2.5,0.9,4.7,2.9,6.6l23.4,23.4c1.9,1.9,4.1,2.9,6.6,2.9
+                            c2.5,0,4.7-0.9,6.6-2.9l72.5-72.5c20.9,12.9,43.3,20.7,67.1,23.1v37.7h-73.1c-4.9,0-9.2,1.8-12.8,5.4c-3.6,3.6-5.4,7.9-5.4,12.8
+                            c0,4.9,1.8,9.2,5.4,12.8c3.6,3.6,7.9,5.4,12.8,5.4h182.7c4.9,0,9.2-1.8,12.8-5.4c3.6-3.6,5.4-7.9,5.4-12.8c0-4.9-1.8-9.2-5.4-12.8
+                            c-3.6-3.6-7.9-5.4-12.8-5.4h-73.1v-37.7c41.3-4.6,76-22.4,104.1-53.5C388,316.2,402,279.6,402,237.5V201c0-4.9-1.8-9.2-5.4-12.8
+                            c-3.6-3.6-7.9-5.4-12.9-5.4c-4.9,0-9.2,1.8-12.8,5.4c-3.6,3.6-5.4,7.9-5.4,12.8v36.5c0,35.2-12.5,65.3-37.5,90.4
+                            s-55.2,37.5-90.4,37.5c-20.6,0-40.1-4.8-58.5-14.6l27.4-27.4C216.7,327.1,227.1,328.9,237.5,328.9z M290.2,16.8
+                            C274.5,5.6,257,0,237.5,0c-25.1,0-46.6,9-64.5,26.8c-17.9,17.9-26.8,39.4-26.8,64.5v146.2L323.5,60.2
+                            C317,42.5,305.9,28.1,290.2,16.8z"/>
+                        </svg>
+                    </div>
+
+                    <div class="icons" id = "pianoDisplay">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512.029 512.029" style="enable-background:new 0 0 512.029 512.029;" xml:space="preserve">
+<path style="fill:#344A5E;" d="M512.014,227.229v253.867c0,17.067-13.867,30.933-30.933,30.933H30.948
+	c-17.067,0-30.933-13.867-30.933-30.933V178.162c0-94.933,75.733-177.067,170.667-178.133c58.667-1.067,112,27.733,142.933,72.533
+	c24.533,34.133,62.933,55.467,104.533,56.533c3.2,0,5.333,0,8.533,1.067C476.814,135.495,512.014,179.229,512.014,227.229z"/>
+<g>
+	<path style="fill:#F3F3F3;" d="M78.948,297.629h-38.4c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h38.4c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C89.614,301.895,84.281,297.629,78.948,297.629z"/>
+	<path style="fill:#F3F3F3;" d="M144.014,297.629h-33.067c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h33.067c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C153.614,301.895,149.348,297.629,144.014,297.629z"/>
+	<path style="fill:#F3F3F3;" d="M208.014,297.629h-33.067c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h33.067c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C218.681,301.895,213.348,297.629,208.014,297.629z"/>
+	<path style="fill:#F3F3F3;" d="M272.014,297.629h-33.067c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h33.067c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C282.681,301.895,278.414,297.629,272.014,297.629z"/>
+	<path style="fill:#F3F3F3;" d="M337.081,297.629h-33.067c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h33.067c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C346.681,301.895,342.414,297.629,337.081,297.629z"/>
+	<path style="fill:#F3F3F3;" d="M401.081,297.629h-33.067c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h33.067c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C411.748,301.895,406.414,297.629,401.081,297.629z"/>
+	<path style="fill:#F3F3F3;" d="M471.481,297.629h-38.4c-5.333,0-10.667,4.267-10.667,10.667v164.267
+		c0,5.333,4.267,10.667,10.667,10.667h38.4c5.333,0,10.667-4.267,10.667-10.667V307.229
+		C481.081,301.895,476.814,297.629,471.481,297.629z"/>
+</g>
+<g>
+	<path style="fill:#415A6B;" d="M105.614,322.162H84.281c-5.333,0-10.667,4.267-10.667,10.667v74.667
+		c0,5.333,4.267,10.667,10.667,10.667h20.267c5.333,0,10.667-4.267,10.667-10.667v-74.667
+		C115.214,327.495,110.948,322.162,105.614,322.162z"/>
+	<path style="fill:#415A6B;" d="M169.614,322.162h-20.267c-5.333,0-10.667,4.267-10.667,10.667v74.667
+		c0,5.333,4.267,10.667,10.667,10.667h20.267c5.333,0,10.667-4.267,10.667-10.667v-74.667
+		C180.281,327.495,174.948,322.162,169.614,322.162z"/>
+	<path style="fill:#415A6B;" d="M234.681,322.162h-21.333c-5.333,0-10.667,4.267-10.667,10.667v74.667
+		c0,5.333,4.267,10.667,10.667,10.667h21.333c5.333,0,10.667-4.267,10.667-10.667v-74.667
+		C244.281,327.495,240.014,322.162,234.681,322.162z"/>
+	<path style="fill:#415A6B;" d="M362.681,322.162h-20.267c-5.333,0-10.667,4.267-10.667,10.667v74.667
+		c0,5.333,4.267,10.667,10.667,10.667h20.267c5.333,0,10.667-4.267,10.667-10.667v-74.667
+		C373.348,327.495,369.081,322.162,362.681,322.162z"/>
+	<path style="fill:#415A6B;" d="M427.748,322.162h-20.267c-5.333,0-10.667,4.267-10.667,10.667v74.667
+		c0,5.333,4.267,10.667,10.667,10.667h20.267c5.333,0,10.667-4.267,10.667-10.667v-74.667
+		C437.348,327.495,433.081,322.162,427.748,322.162z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                    </div>
+                </div></center>
+            </div>
+        </div>
+
+        <audio id = "pitch1" src="Notes-1.m4a"></audio>
+        <audio id = "pitch2" src="Notes-2.m4a"></audio>
+        <audio id = "pitch3" src="Notes-3.m4a"></audio>
+        <audio id = "pitch4" src="Notes-4.m4a"></audio>
+        <audio id = "pitch5" src="Notes-5.m4a"></audio>
+        <audio id = "pitch6" src="Notes-6.m4a"></audio>
+        <audio id = "pitch7" src="Notes-7.m4a"></audio>
+        <audio id = "pitch8" src="Notes-8.m4a"></audio>
+        <audio id = "pitch9" src="Notes-9.m4a"></audio>
+        <audio id = "pitch10" src="Notes-10.m4a"></audio>
+        <audio id = "pitch11" src="Notes-11.m4a"></audio>
+        <audio id = "pitch12" src="Notes-12.m4a"></audio>
+        <audio id = "pitch13" src="Notes-13.m4a"></audio>
+        <audio id = "pitch14" src="Notes-14.m4a"></audio>
+        <audio id = "pitch15" src="Notes-15.m4a"></audio>
+        <audio id = "pitch16" src="Notes-16.m4a"></audio>
+        <audio id = "pitch17" src="Notes-17.m4a"></audio>
+        <audio id = "pitch18" src="Notes-18.m4a"></audio>
+        <audio id = "pitch19" src="Notes-19.m4a"></audio>
+        <audio id = "pitch20" src="Notes-20.m4a"></audio>
+        <audio id = "pitch21" src="Notes-21.m4a"></audio>
+        <audio id = "pitch22" src="Notes-22.m4a"></audio>
+        <audio id = "pitch23" src="Notes-23.m4a"></audio>
+        <audio id = "pitch24" src="Notes-24.m4a"></audio>
+
+        <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.0.0.js"></script>
+        <script src="agoraRTC.js"></script>
+    </body>
+</html>

@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+#leftSection {
+    width: 25vw;
+    height: 100vh;
+    box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.3);
+    background-image: url("singingWallpaper.jpg");
+}
+#imageLogo{
+    padding-top: 5%;
+    margin-left: 10%;
+    max-width: 100%;
+    max-height: 100%;
+}
+#logo{
+    width:30%;
+    margin-bottom: 10%;
+}
+#headingText{
+    font-size: 2rem;
+    margin-left: 9%;
+    color: white;
+}
+input{
+    margin-top: 4%;
+    margin-left: 9%;;
+    padding: 5px;
+    width: 80%;
+    height: 3%;
+    font-size: 1.25rem;
+    border: 4px solid  orange;
+    border-radius: 5px;
+}
+#joinButton{
+    margin-left: 9%;
+    margin-top: 3%;
+    width: 15%;
+    margin-bottom: 50px;
+    background-color: rgb(43, 205, 255);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: none;
+}
+.flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#rightSection{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(253, 240, 211);
+}
+#localStream{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-top: 1%;
+    border: 2px solid rgb(197, 35, 143);
+    width: 20%;
+    height: 18vh;
+}
+#remoteStream{
+    text-align: left;
+    margin-top: 20px;
+    border: 2px solid rgb(197, 35, 143);
+    width: 50vw;
+    height: 50vh;
+}
+ .styledBorder{
+    border: 2px solid #099dfd;
+    width:10vw;
+ }
+ #leaveButton{
+    background-color: rgb(197, 35, 143);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    color: white;
+    border: none;
+
+ }
+ #controls {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-evenly;
+     margin-top: 2%;
+     margin-bottom: 0px;
+     height: 10vh;
+     width: 20vw;
+     background-color: rgb(253, 240, 211);
+     border-radius: 30px;
+
+     box-shadow: 0px 4px 52px rgba(0, 0, 0, 0.5);
+ }
+ .icons {
+     width: 18%;
+     cursor: pointer;
+ }
+ .whiteNotes{
+    font:bold;
+    height:10vh;
+    width: 2vw;
+    background-color: white;
+}
+.blackNotes{
+    padding: 0px;
+    font-size: 10px;
+    height: 6vh;
+    width: 1vw;
+    background-color: black;
+    color: white;
+}
+#piano{
+    flex-direction: row;
+    margin: auto;
+    margin-top: 2%;
+}
+#nameTag{
+    width: 50px;
+    height: 10px;
+    font-weight:900;
+    font-size: x-large;
+    color:white
+}
