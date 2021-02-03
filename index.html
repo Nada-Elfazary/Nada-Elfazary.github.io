@@ -16,7 +16,7 @@
                     <form action="./index.html" onsubmit="return validation()"></form>
                     <input type="text" id="emailTab" placeholder="Email"/>
                     <br/>
-                    <input type="password" id="passwordTab" placeholder="Password"/>
+                    <input type="password" id="passwordTab" placeholder="Password (at least 8 digits)"/>
                     <br/>
                     <button id="loginButton" onclick="validation()">LOGIN</button>
                     </form>
@@ -50,7 +50,6 @@
 
                 if(password.value.length >= 8){
                     password.className = ""
-
                     return true
                 }
                 else
@@ -58,7 +57,7 @@
                     password.className = "incorrect"
                     return false
                 }
-            }else{
+            } else{
                 email.className = "incorrect"
                 return false
             }
